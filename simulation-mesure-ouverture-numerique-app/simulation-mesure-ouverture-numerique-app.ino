@@ -14,13 +14,11 @@ void loop() {
     case 'd':
       enOpertion = true;
       nbPasRealise = 0;
-      digitalWrite(LED_BUILTIN, HIGH);
       delay(1000);
       break;
 
     case 's':
       enOpertion = false;
-      digitalWrite(LED_BUILTIN, LOW);
       break;
   }
 
@@ -33,4 +31,6 @@ void loop() {
       Serial.println("FIN");
     }
   }
+
+  digitalWrite(LED_BUILTIN, enOpertion);
 }
